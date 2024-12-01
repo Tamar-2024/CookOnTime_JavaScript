@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>TON BURGERS</title> 
+    <link rel="stylesheet" href="sound.css"> <!-- חיצוני אייקון רמקול -css -->
+    <link rel="stylesheet" href="play.css">
+</head>
+<body>
+
+    <div class="top-left-container">
+        <img id="speakerIcon" class="speaker-icon" src="pictures/רמקול דלוק.png" onclick="Mute()"> <!-- אייקון לשינוי רמקול דלוק/כבוי -->
+        <button class="song-button" onclick="playAudio()">לניגון המנגינה</button> 
+    </div>
+    <audio id="myAudio" src="sounds/רמקול.ogg" autoplay></audio> 
+
+    <div class="container">
+        <h1>TON BURGERS</h1> 
+        <button class="play-button" onclick="goToSignUp()">PLAY</button> 
+    </div>
+
+    <script src="sound.js"></script> <!-- חיצוני אייקון רמקול -JavaScript -->
+
+    <script>
+        function goToSignUp() {
+            window.location.href = 'login.html'; 
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+

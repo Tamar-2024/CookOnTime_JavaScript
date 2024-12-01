@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* הכותרת והכפתורים באמצע הדף */
+    height: 70vh;
+    margin: 0;
+    background-image: url(pictures/רקע\ שלבים.png);
+    background-size: cover; /* התמונה מכסה את כל העמוד */
+    background-position: center; /* התמונה ממורכזת */
+    font-family: 'Goudy Stout';
+    text-align: center; /* הכותרת ממורכזת */
+}
+
+h1 {
+    margin-bottom: 5%; /* רווח מהכותרת */
+    font-size: 10vh; /* גודל גופן יחסי לרוחב החלון */
+    color: rgb(141, 87, 22); /* צבע כתום כהה לכותרת */
+    border: 0.5vw solid #bd8656; /* מסגרת לכותרת */
+    padding: 2%; /* רווח פנימי בתוך המסגרת */
+    border-radius: 2%; /* פינות מעוגלות למסגרת */
+    background-color: rgba(255, 255, 255, 0.7); /* רקע חצי שקוף למסגרת */
+}
+
+.buttons {
+    display: flex;
+    gap: 5%; /* רווחים בין הכפתורים */
+    flex-wrap: wrap; /* מאפשר לכפתורים לעבור שורה במידת הצורך */
+    justify-content: center; /* ממקם את הכפתורים במרכז */
+}
+
+.levelb {
+    background-color: #bd8656; /* צבע כתום לכפתורים */
+    color: #9c5833;
+    padding: 2% 4%; /* הגדלת גודל הכפתורים */
+    font-size: 3vw; /* הגדלת גודל גופן לכפתורים */
+    cursor: pointer;
+    border: 1vh solid #8e5b40;
+    border-radius: 45%; /* פינות מעוגלות לכפתורים */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* אנימציה ללחיצה */
+    margin: 1%; /* רווח בין הכפתורים */
+}
+
+.levelb:hover {
+    background-color: #562402; /* שינוי צבע לכפתור במעבר עכבר */
+}
+
+.levelb:active {
+    transform: scale(0.95); /* אפקט לחיצה */
+}
+
+@media (max-width: 780px) {
+    .buttons {
+        flex-direction: column;
+    }
+    .buttons .levelb {
+        flex-basis: 100%;
+    }
+    h1 {
+        font-size: 5vh; /* כותרת קטנה יותר */
+    }
+}

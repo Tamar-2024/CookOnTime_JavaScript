@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>burgers</title>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="step.html"> -->
+    <link rel="icon" href="תמונות/המבורגרבלירקע.png"> 
+
+</head>
+<style>
+    .timer-container {
+        position: absolute;
+        width: 8%;
+        /* height: 5%; */
+        /* height: 30%; */
+        /* background-color: #9e4a28; */
+        /* background-color: #aea4a4; */
+        /* border-radius: 50%; */
+        display: flex;
+        justify-content: center;
+        margin: 2% auto;
+        margin-top: -0.3%;
+        /* opacity: 0.6; */
+        /* border-radius: 50%; */
+
+
+    }
+
+    .timer {
+        /* height: 8; */
+        box-shadow: #c1b7b7;
+        font-size: 2rem;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        /* background-color: #c1b7b7; */
+        border-radius: 5%;
+        margin-top: 3%;
+        margin-right: -30%;
+        /* margin-left: -10%; */
+        /* opacity: 0.7; */
+    }
+
+    #timerstart {
+        width: 115%;
+        height: 6vh;
+        margin-top: 7%;
+        margin-left: 35%;
+
+    }
+</style>
+
+<body>
+    <div id="overlay" class="overlay">
+        <button id="start-button" class="start-button">
+            <i class="fas fa-play"></i>
+        </button>
+    </div>
+    <audio id="background-music" src="sounds/רמקול.ogg" preload="auto"></audio>
+    <header>
+        
+        <div class="timer-container">
+            <div class="timer" id="timer">1:30</div>
+            <img id="timerstart" src="תמונות/שעוןטיימר.png" alt="Timer Image">
+        </div>
+        <img class="burgerlogo" src="תמונות/המבורגרלוגו.png" alt="">
+        <div class="price">0</div>
+        
+        <div class="dropdown">
+            <span><i class="fas fa-bars"></i></span>
+            <div class="dropdown-content">
+                <a href="login.html">דף כניסה</a>
+                <a href="step.html">שלבים</a>
+            </div>
+        </div>
+        <button class="fas fa-pause" id="stop">  stop \ play </button>
+    </header>
+    <button class="icon-button" id="burgerButton">
+        <i class="fas fa-hamburger"></i>
+    </button>
+    <div class="container">
+        <img id="mainpicture" src="תמונות/רקעשולחןלמטה.png" alt="">
+        <div class="Potatos">
+            <img id="potato" class="drag" src="תמונות/ציפסבלירקע.png" draggable="true" alt="">
+            <img id="potato" class="drag" src="תמונות/ציפסבלירקע.png" draggable="true" alt="">
+            <img id="potato" class="drag" src="תמונות/ציפסבלירקע.png" draggable="true" alt="">
+        </div>
+        <div class="ketchop-container">
+            <img id="ketchop" class="drag" src="תמונות/קטשופבלירקע.png" draggable="true" alt="">
+        </div>
+
+        <div class="food">
+            <img class="drag" src="תמונות/המבורגרבלירקע.png" draggable="true" alt="">
+            <img class="drag" src="תמונות/המבורגרבלירקע.png" draggable="true" alt="">
+            <img class="drag" src="תמונות/המבורגרבלירקע.png" draggable="true" alt="">
+        </div>
+
+        <div class="vegetables">
+            <img id="tomato"  class="drag" src="תמונות/עגבניהבלירקע.png" draggable="true" alt="">
+            <img id="lettuce" class="drag" src="תמונות/חסהבלירקע.png" draggable="true" alt="">
+        </div>
+
+
+
+        <div class="drinkola">
+            <img id="kola" class="drag" src="תמונות/בקבוקולה.png" draggable="true" alt="">
+            <img id="kola" class="drag" src="תמונות/בקבוקולה.png" draggable="true" alt="">
+            <img id="kola" class="drag" src="תמונות/בקבוקולה.png" draggable="true" alt="">
+        </div>
+
+        <div class="cupred" >
+            <img src="תמונות/כוסשתיהאדומה.png" class="drag" draggable="=true" alt="">
+        </div>
+
+    </div>
+    <button id="startAnimation" hidden> <img style="width: 150%;" src="תמונות/כסףבלירקע.png" alt=""></button>
+
+    <script src="main.js" defer></script>
+
+</body>
+
+</html>
